@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Student News Articles';
-  staticPath: string = 'http://localhost:3001/staticArticles';
+  staticPath: string = 'http://localhost:3000/';
 }
