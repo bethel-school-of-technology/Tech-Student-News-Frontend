@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Article } from '../../models/article';
 
 @Component({
-  selector: 'app-articles',
-  templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.css']
+  selector: 'app-articlesFeatureProject',
+  templateUrl: './articles-feature-project.component.html',
+  styleUrls: ['./articles-feature-project.component.css']
 })
-export class ArticlesComponent implements OnInit {
+export class ArticlesFeatureProjectComponent implements OnInit {
     articles: Article[];
     @Input() dataPath: string;   
   constructor(private http: HttpClient) { }

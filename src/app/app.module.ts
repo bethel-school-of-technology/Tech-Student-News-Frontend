@@ -4,14 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {NavBarComponent} from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import { ArticlesComponent } from './components/articles-feature-project/articles-feature-project.component';
+import {ArticlesFeatureProjectComponent} from '../app/components/articlesFeatureProject/articles-feature-project.component';
+import {ArticlesFavoriteTipsComponent} from './components/articlesFavoriteTips/articles-favorite-tips.component';
+import {EventsComponent} from './components/events/upcoming-events.component';
+import {SuggestionsComponent} from './components/suggestions/suggestions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavBarComponent,
     HomeComponent,
-    ArticlesComponent
+    ArticlesFeatureProjectComponent,
+    ArticlesFavoriteTipsComponent,
+    EventsComponent,
+    SuggestionsComponent
   ],
   imports: [
     BrowserModule,
