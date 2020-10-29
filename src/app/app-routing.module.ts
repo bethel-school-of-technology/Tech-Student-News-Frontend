@@ -2,10 +2,11 @@ import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import {HomeComponent} from './home/home.component';
-import {ArticlesFavoriteTipsComponent} from './components/articlesFavoriteTips/articles-favorite-tips.component';
-import {ArticlesFeatureProjectComponent} from './components/articlesFeatureProject/articles-feature-project.component';
-import {EventsComponent} from './components/events/upcoming-events.component';
-import {SuggestionsComponent} from './components/suggestions/suggestions.component';
+import {NavBarComponent} from './nav-bar/nav-bar.component';
+import {FavoritesTipsArticlesComponent } from '../app/favorites-tips-articles/favorites-tips-articles.component';
+import {FeaturedProjectArticlesComponent} from '../app/featured-project-articles/featured-project-articles.component';
+import {UpcomingEventsComponent} from '../app/upcoming-events/upcoming-events.component';
+import {SuggestionsComponent} from '../app/suggestions/suggestions.component';
 
 const routes: Routes = [
   {
@@ -13,16 +14,20 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'articlesFavoriteTips',
-    component: ArticlesFavoriteTipsComponent
+    path: 'nav-bar',
+    component: NavBarComponent
   },
   {
-    path: 'articlesFeatureProject',
-    component: ArticlesFeatureProjectComponent
+    path: 'favorites-tips-articles',
+    component: FavoritesTipsArticlesComponent
   },
   {
-  path: 'events',
-  component: EventsComponent
+    path: 'feature-project-articles',
+    component: FeaturedProjectArticlesComponent
+  },
+  {
+  path: 'upcoming-events',
+  component: UpcomingEventsComponent
 },
 {
   path:'suggestions',

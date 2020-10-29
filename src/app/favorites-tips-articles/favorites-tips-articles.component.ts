@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Article } from '../../models/article';
+import {Article} from '../models/article';
 
 @Component({
-  selector: 'app-articlesFavoriteTips',
-  templateUrl: './articles-favorite-tips.component.html',
-  styleUrls: ['./articles-favorite-tips.component.css']
+  selector: 'app-favorites-tips-articles',
+  templateUrl: './favorites-tips-articles.component.html',
+  styleUrls: ['./favorites-tips-articles.component.css']
 })
-export class ArticlesFavoriteTipsComponent implements OnInit {
+
+export class FavoritesTipsArticlesComponent implements OnInit {
     articles: Article[];
     @Input() dataPath: string;   
   constructor(private http: HttpClient) { }
@@ -18,3 +19,4 @@ export class ArticlesFavoriteTipsComponent implements OnInit {
     });
 }
 }
+
