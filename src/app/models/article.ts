@@ -1,5 +1,6 @@
 export class Article {
-    id: number;
-  name: string;
-  
+    Category: string;
+    Date: Date;
+    Content: string;
+    Keywords: string;
 }
