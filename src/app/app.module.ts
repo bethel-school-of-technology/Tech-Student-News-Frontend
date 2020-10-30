@@ -10,6 +10,8 @@ import {SuggestionsComponent} from './suggestions/suggestions.component';
 import { FavoritesTipsArticlesComponent } from './favorites-tips-articles/favorites-tips-articles.component';
 import { FeaturedProjectArticlesComponent } from './featured-project-articles/featured-project-articles.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import bootstrap from "bootstrap";
+
 
 @NgModule({
   declarations: [
