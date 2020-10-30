@@ -6,6 +6,9 @@ import {ArticlesFavoriteTipsComponent} from './components/articlesFavoriteTips/a
 import {ArticlesFeatureProjectComponent} from './components/articlesFeatureProject/articles-feature-project.component';
 import {EventsComponent} from './components/events/upcoming-events.component';
 import {SuggestionsComponent} from './components/suggestions/suggestions.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -27,7 +30,20 @@ const routes: Routes = [
 {
   path:'suggestions',
   component: SuggestionsComponent
-}
+},
+{
+  path:'register',
+  component: RegisterComponent
+},
+{
+  path:'login',
+  component: LoginComponent
+},
+{
+  path:'profile',
+  component: ProfileComponent
+},
+{ path: "", pathMatch: "full", redirectTo: "/home" }
 ];
 
 @NgModule({

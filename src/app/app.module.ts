@@ -10,6 +10,9 @@ import {ArticlesFeatureProjectComponent} from '../app/components/articlesFeature
 import {ArticlesFavoriteTipsComponent} from './components/articlesFavoriteTips/articles-favorite-tips.component';
 import {EventsComponent} from './components/events/upcoming-events.component';
 import {SuggestionsComponent} from './components/suggestions/suggestions.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {SuggestionsComponent} from './components/suggestions/suggestions.compone
     ArticlesFeatureProjectComponent,
     ArticlesFavoriteTipsComponent,
     EventsComponent,
-    SuggestionsComponent
+    SuggestionsComponent,
+    RegisterComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
