@@ -1,12 +1,15 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common'
+
 import { Routes, RouterModule } from '@angular/router';
 
 import {HomeComponent} from './home/home.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {FavoritesTipsArticlesComponent } from '../app/favorites-tips-articles/favorites-tips-articles.component';
-import {FeaturedProjectArticlesComponent} from '../app/featured-project-articles/featured-project-articles.component';
+import {FeaturedProjectsArticlesComponent} from '../app/featured-projects-articles/featured-projects-articles.component';
 import {UpcomingEventsComponent} from '../app/upcoming-events/upcoming-events.component';
 import {SuggestionsComponent} from '../app/suggestions/suggestions.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -22,8 +25,8 @@ const routes: Routes = [
     component: FavoritesTipsArticlesComponent
   },
   {
-    path: 'feature-project-articles',
-    component: FeaturedProjectArticlesComponent
+    path: 'feature-projects-articles',
+    component: FeaturedProjectsArticlesComponent
   },
   {
   path: 'upcoming-events',
@@ -32,11 +35,17 @@ const routes: Routes = [
 {
   path:'suggestions',
   component: SuggestionsComponent
+},
+
+{
+  path:'',
+  redirectTo: '/home',
+  pathMatch: 'full'
 }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [CommonModule,RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

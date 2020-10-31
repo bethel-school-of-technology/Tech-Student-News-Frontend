@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Event} from '../models/event';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcoming-events.component.css']
 })
 export class UpcomingEventsComponent implements OnInit {
+  events: Event[];
+  @Input() dataPath: string;   
+constructor(private http: HttpClient) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+ngOnInit() {
+  this.http.get<Event[]>(this.dataPath).subscribe(events => {
+  this.events = events ;
+  });
+}
 }
