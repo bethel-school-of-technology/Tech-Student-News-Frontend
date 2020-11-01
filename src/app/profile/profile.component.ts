@@ -10,7 +10,7 @@ import { User } from "../user";
 export class ProfileComponent implements OnInit {
   user: User = new User();
 
-  constructor(private userService: UserService) {}
+  constructor(public userService: UserService) {}
 
   ngOnInit() {
     // find the profile for the current user based on their token
