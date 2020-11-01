@@ -1,6 +1,7 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Article} from '../models/article';
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-featured-projects-articles',
   templateUrl: './featured-projects-articles.component.html',

@@ -1,12 +1,25 @@
-<app-nav-bar></app-nav-bar>
+<h1>Article</h1>
+<h1>Search / Filter example</h1>
 
-  
-  <div style="text-align:center">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-  </div>
-  <hr/>
-  
-  <footer>
-<router-outlet></router-outlet>
+<input placeholder="search term" [(ngModel)]="term" />
+<button (click)="doSearch()">Search</button>
+<button (click)="resetSearch()">Reset</button>
+<hr />
+Searching for: {{ term }}
+<hr />
+<ul>
+  <li *ngFor="let word of filteredWords">
+    {{ word }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let article of articles">{{ article.name }}</li>
+</ul>
+<input [(ngModel)]="newArticle.name" placeholder="name" /><button
+  (click)="addArticle()"
+>
+  Submit
+</button>
+
+<router-outlet></router-outlet> 

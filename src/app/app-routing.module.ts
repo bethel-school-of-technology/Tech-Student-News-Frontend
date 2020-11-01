@@ -1,15 +1,14 @@
-import { NgModule } from '@angular/core';
-import {CommonModule} from '@angular/common'
-
+import {NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+ 
 import {HomeComponent} from './home/home.component';
-import {NavBarComponent} from './nav-bar/nav-bar.component';
-import {FavoritesTipsArticlesComponent } from '../app/favorites-tips-articles/favorites-tips-articles.component';
-import {FeaturedProjectsArticlesComponent} from '../app/featured-projects-articles/featured-projects-articles.component';
-import {UpcomingEventsComponent} from '../app/upcoming-events/upcoming-events.component';
-import {SuggestionsComponent} from '../app/suggestions/suggestions.component';
-import { from } from 'rxjs';
+import {FavoritesTipsArticlesComponent} from './favorites-tips-articles/favorites-tips-articles.component';
+import {FeaturedProjectsArticlesComponent} from './featured-projects-articles/featured-projects-articles.component';
+import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
+import {SuggestionsComponent} from './suggestions/suggestions.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -17,15 +16,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'nav-bar',
-    component: NavBarComponent
-  },
-  {
-    path: 'favorites-tips-articles',
+    path: 'favoritestipsarticles',
     component: FavoritesTipsArticlesComponent
   },
   {
-    path: 'featured-project-articles',
+    path: 'featured-projects-articles',
     component: FeaturedProjectsArticlesComponent
   },
   {
@@ -36,16 +31,23 @@ const routes: Routes = [
   path:'suggestions',
   component: SuggestionsComponent
 },
-
 {
-  path:'',
-  redirectTo: '/home',
-  pathMatch: 'full'
-}
+  path:'register',
+  component: RegisterComponent
+},
+{
+  path:'login',
+  component: LoginComponent
+},
+{
+  path:'profile',
+  component: ProfileComponent
+},
+{ path: "", pathMatch: "full", redirectTo: "/home" }
 ];
 
 @NgModule({
-  imports: [CommonModule,RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
