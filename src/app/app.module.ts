@@ -10,9 +10,11 @@ import {SuggestionsComponent} from './suggestions/suggestions.component';
 import { FavoritesTipsArticlesComponent } from './favorites-tips-articles/favorites-tips-articles.component';
 import { FeaturedProjectsArticlesComponent } from './featured-projects-articles/featured-projects-articles.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+
+import {ArticlesModule} from '../app/modules/articles/articles.module';
+import {EventsModule} from '../app/modules/events/events.module';
+import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
 import bootstrap from "bootstrap";
-
-
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import bootstrap from "bootstrap";
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ArticlesModule,
+    EventsModule,
+    SuggestionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

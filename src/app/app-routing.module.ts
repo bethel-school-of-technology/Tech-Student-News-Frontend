@@ -25,7 +25,7 @@ const routes: Routes = [
     component: FavoritesTipsArticlesComponent
   },
   {
-    path: 'feature-projects-articles',
+    path: 'featured-project-articles',
     component: FeaturedProjectsArticlesComponent
   },
   {
