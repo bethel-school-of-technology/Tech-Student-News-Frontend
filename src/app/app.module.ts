@@ -11,6 +11,11 @@ import { FavoritesTipsArticlesComponent } from './favorites-tips-articles/favori
 import { FeaturedProjectsArticlesComponent } from './featured-projects-articles/featured-projects-articles.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 
+
+
+
+
+
 import {ArticlesModule} from '../app/modules/articles/articles.module';
 import {EventsModule} from '../app/modules/events/events.module';
 import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
