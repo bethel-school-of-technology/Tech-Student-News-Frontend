@@ -8,13 +8,19 @@ import {Event} from '../models/event';
   styleUrls: ['./upcoming-events.component.css']
 })
 export class UpcomingEventsComponent implements OnInit {
-  events: Event[];
+  private eventsRoute = 'http://localhost:3000/upcoming-events';
+  public events: Event[];
   @Input() dataPath: string;   
 constructor(private http: HttpClient) { }
 
+getEvents (){
+  this.http.get<Event[]>(this.eventsRoute).subscribe(events => {
+    this.events = events ;
+    console.log('Event',this.events);
+    });
+}
+
 ngOnInit() {
-  this.http.get<Event[]>(this.dataPath).subscribe(events => {
-  this.events = events ;
-  });
+  this.getEvents();
 }
 }

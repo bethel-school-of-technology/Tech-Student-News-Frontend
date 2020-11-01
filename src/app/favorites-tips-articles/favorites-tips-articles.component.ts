@@ -9,14 +9,20 @@ import {Article} from '../models/article';
 })
 
 export class FavoritesTipsArticlesComponent implements OnInit {
-    articles: Article[];
+  private articlesRoute = 'http://localhost:3000/favorites-tips-articles';  
+  public articles: Article[];
     @Input() dataPath: string;   
   constructor(private http: HttpClient) { }
+getArticles(){
+  this.http.get<Article[]>(this.articlesRoute).subscribe(articles => {
+    this.articles = articles;
+    console.log('Article', this.articles);
+    });
+}
 
   ngOnInit() {
-    this.http.get<Article[]>(this.dataPath).subscribe(articles => {
-    this.articles = articles;
-    });
+  this.getArticles();
+    
 }
 }
 

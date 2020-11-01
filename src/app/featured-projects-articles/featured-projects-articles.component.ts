@@ -8,13 +8,19 @@ import { Input } from '@angular/core';
   styleUrls: ['./featured-projects-articles.component.css']
 })
 export class FeaturedProjectsArticlesComponent implements OnInit {
-  articles: Article[];
-  @Input() dataPath: string;   
-constructor(private http: HttpClient) { }
+  private articlesRoute = 'http://localhost:3000/featured-projects-articles';  
+  public articles: Article[];
+    @Input() dataPath: string;   
+  constructor(private http: HttpClient) { }
+getArticles(){
+  this.http.get<Article[]>(this.articlesRoute).subscribe(articles => {
+    this.articles = articles;
+    console.log('Article', this.articles);
+    });
+  }
 
-ngOnInit() {
-  this.http.get<Article[]>(this.dataPath).subscribe(articles => {
-  this.articles = articles;
-  });
+  ngOnInit() {
+  this.getArticles();
+    
 }
 }

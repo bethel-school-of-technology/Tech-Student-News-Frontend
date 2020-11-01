@@ -8,13 +8,19 @@ import {Suggestion} from '../models/suggestion';
   styleUrls: ['./suggestions.component.css']
 })
 export class SuggestionsComponent implements OnInit {
-  suggestions: Suggestion[];
+  private suggestionsRoute = 'http://localhost:3000/suggestions';
+  public suggestions: Suggestion[];
   @Input() dataPath: string;   
 constructor(private http: HttpClient) { }
 
+getSuggestions() {
+  this.http.get<Suggestion[]>(this.suggestionsRoute).subscribe(suggestions => {
+    this.suggestions = suggestions ;
+    console.log('Suggestion',this.suggestions);
+    });
+}
+
 ngOnInit() {
-  this.http.get<Suggestion[]>(this.dataPath).subscribe(suggestions => {
-  this.suggestions = suggestions ;
-  });
+ this.getSuggestions();
 }
 }
