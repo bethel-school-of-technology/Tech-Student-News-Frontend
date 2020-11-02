@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import {FavoritesTipsArticlesComponent} from './favorites-tips-articles/favorites-tips-articles.component';
-import {FeaturedProjectsArticlesComponent} from './featured-projects-articles/featured-projects-articles.component';
-import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
-import {SuggestionsComponent} from './suggestions/suggestions.component';
+//import {FavoritesTipsArticlesComponent} from './favorites-tips-articles/favorites-tips-articles.component';
+//import {FeaturedProjectsArticlesComponent} from './featured-projects-articles/featured-projects-articles.component';
+//import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
+//import {SuggestionsComponent} from './suggestions/suggestions.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -23,10 +23,10 @@ import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    FavoritesTipsArticlesComponent,
-    FeaturedProjectsArticlesComponent,
-    UpcomingEventsComponent,
-    SuggestionsComponent,
+    //FavoritesTipsArticlesComponent,
+    //FeaturedProjectsArticlesComponent,
+    //UpcomingEventsComponent,
+    //SuggestionsComponent,
     RegisterComponent,
     LoginComponent,
     ProfileComponent
