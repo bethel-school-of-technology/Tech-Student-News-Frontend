@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+
 
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
@@ -37,7 +39,8 @@ import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
     AppRoutingModule,
     ArticlesModule,
     EventsModule,
-    SuggestionsModule
+    SuggestionsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
