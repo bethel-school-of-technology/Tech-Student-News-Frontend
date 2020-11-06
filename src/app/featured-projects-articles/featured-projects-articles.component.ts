@@ -8,12 +8,12 @@ import { Input } from '@angular/core';
   styleUrls: ['./featured-projects-articles.component.css']
 })
 export class FeaturedProjectsArticlesComponent implements OnInit {
-  private articlesRoute = 'http://localhost:3000/featured-projects-articles';  
+  private articleRoute = 'http://localhost:3000/article';  
   public articles: Article[];
     @Input() dataPath: string;   
   constructor(private http: HttpClient) { }
 getArticles(){
-  this.http.get<Article[]>(this.articlesRoute).subscribe(articles => {
+  this.http.get<Article[]>(this.articleRoute).subscribe(articles => {
     this.articles = articles;
     console.log('Article', this.articles);
     });
