@@ -21,7 +21,7 @@ export class UserService {
   // register a user, must .subscribe() to trigger
   // POST baserl/signup
   registerUser(user: User): Observable<string> {
-    return this.http.post<string>(this.url + "signup", user, this.options);
+    return this.http.post<string>(this.url + "register", user, this.options);
   }
 
   // login a user, must .subscribe() to trigger
