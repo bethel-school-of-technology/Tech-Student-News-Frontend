@@ -1,1 +1,13 @@
-<p>upcoming-events works!</p>
+<div class="pb-5 container" *ngFor="let event of events">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-8 bg-secondary text-white">
+        {{event.NameOfEvent}}
+      </div>
+      <div class="col-sm-4 bg-dark text-white">
+        {{event.Date}}
+      </div>
+    </div>
+   
+  </div>
+
+

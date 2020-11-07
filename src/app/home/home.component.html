@@ -1,19 +1,42 @@
-<div class="pb-5 container" *ngFor="let article of article">
+<div class="pb-5 container" *ngFor="let favorites of favorites">
     <div class="row justify-content-md-center">
       <div class="col-sm-8 bg-secondary text-white">
-        {{article.Category}}
+        {{favorites.Category}}
       </div>
       <div class="col-sm-4 bg-dark text-white">
-        {{article.Date}}
+        {{favorites.Date}}
       </div>
     </div>
     <div class="row justify-content-md-center">
         <div class="col-sm bg-light text-dark">
-          {{article.Content}}
+          {{favorites.Content}}
         </div>
     </div>
     <div class="row justify-content-md-center">
-      {{article.Keywords}}
+      {{favorites.Keywords}}
+    </div>
+    
+  </div>
+<br>
+<br>
+<br>
+<br>
+  <div class="pb-5 container" *ngFor="let projects of projects">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-8 bg-secondary text-white">
+        {{projects.Category}}
+      </div>
+      <div class="col-sm-4 bg-dark text-white">
+        {{projects.Date}}
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-sm bg-light text-dark">
+          {{projects.Content}}
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+      {{projects.Keywords}}
     </div>
     
   </div>

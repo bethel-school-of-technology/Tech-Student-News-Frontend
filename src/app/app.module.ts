@@ -8,15 +8,12 @@ import { FormsModule } from '@angular/forms';
 
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-//import {FavoritesTipsArticlesComponent} from './favorites-tips-articles/favorites-tips-articles.component';
-//import {FeaturedProjectsArticlesComponent} from './featured-projects-articles/featured-projects-articles.component';
-//import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
-//import {SuggestionsComponent} from './suggestions/suggestions.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import {ArticlesModule} from '../app/modules/articles/articles.module';
+import {FavoritesModule} from '../app/modules/favorites/favorites.module';
+import {ProjectsModule} from '../app/modules/projects/projects.module';
 import {EventsModule} from '../app/modules/events/events.module';
 import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
 
@@ -27,10 +24,6 @@ import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    //FavoritesTipsArticlesComponent,
-    //FeaturedProjectsArticlesComponent,
-    //UpcomingEventsComponent,
-    //SuggestionsComponent,
     RegisterComponent,
     LoginComponent,
     ProfileComponent
@@ -39,7 +32,8 @@ import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ArticlesModule,
+    FavoritesModule,
+    ProjectsModule,
     EventsModule,
     SuggestionsModule,
     FormsModule

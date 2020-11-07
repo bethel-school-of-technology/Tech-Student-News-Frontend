@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Article } from '../models/article';
-
+import { Favorites } from '../models/favorites';
+import {Projects} from '../models/projects';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +9,27 @@ import { Article } from '../models/article';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private articleRoute = 'http://localhost:3000/article';
-  public article: Article[];
+  private favoritesRoute = 'http://localhost:3000/favorites';
+  private projectsRoute =  'http://localhost:3000/projects';
+  public favorites: Favorites[];
+  public projects: Projects[];
 
   constructor(private http: HttpClient) {}
 
-  getArticles() {
-    this.http.get<Article[]>(this.articleRoute).subscribe(articles => {
-      this.article = articles;
-      console.log('Articles', this.article);
+  getFavorites() {
+    this.http.get<Favorites[]>(this.favoritesRoute).subscribe(favorites => {
+      this.favorites = favorites;
+      console.log('Favorites', this.favorites);
+    });
+  }
+  getProjects() {
+    this.http.get<Projects[]>(this.projectsRoute).subscribe(projects => {
+      this.projects = projects;
+      console.log('Projects', this.projects);
     });
   }
   ngOnInit() {
-    this.getArticles();
+    this.getFavorites();
+    this.getProjects();
   }
 }

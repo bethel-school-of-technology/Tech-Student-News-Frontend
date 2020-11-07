@@ -16,11 +16,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'article',
+    path: 'favorites-tips-articles',
     component: FavoritesTipsArticlesComponent
   },
   {
-    path: 'article',
+    path: 'featured-projects-articles',
     component: FeaturedProjectsArticlesComponent
   },
   {
