@@ -1,4 +1,4 @@
-export class Article {
+export class Projects {
     Category: string;
     Date: Date;
     Content: string;

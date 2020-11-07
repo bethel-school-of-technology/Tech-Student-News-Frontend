@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Article} from '../models/article';
+import {Projects} from '../models/projects';
 import { Input } from '@angular/core';
 @Component({
   selector: 'app-featured-projects-articles',
@@ -8,19 +8,19 @@ import { Input } from '@angular/core';
   styleUrls: ['./featured-projects-articles.component.css']
 })
 export class FeaturedProjectsArticlesComponent implements OnInit {
-  private articleRoute = 'http://localhost:3000/article';  
-  public articles: Article[];
+  private projectsRoute = 'http://localhost:3000/projects';  
+  public projects: Projects[];
     @Input() dataPath: string;   
   constructor(private http: HttpClient) { }
-getArticles(){
-  this.http.get<Article[]>(this.articleRoute).subscribe(articles => {
-    this.articles = articles;
-    console.log('Article', this.articles);
+getProjects(){
+  this.http.get<Projects[]>(this.projectsRoute).subscribe(projects => {
+    this.projects = projects;
+    console.log('Projects', this.projects);
     });
   }
 
   ngOnInit() {
-  this.getArticles();
+  this.getProjects();
     
 }
 }

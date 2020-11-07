@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Article} from '../models/article';
+import {Favorites} from '../models/favorites';
 
 @Component({
   selector: 'app-favorites-tips-articles',
@@ -9,19 +9,19 @@ import {Article} from '../models/article';
 })
 
 export class FavoritesTipsArticlesComponent implements OnInit {
-  private articleRoute = 'http://localhost:3000/article';  
-  public articles: Article[];
+  private favoritesRoute = 'http://localhost:3000/favorites';  
+  public favorites: Favorites[];
     @Input() dataPath: string;   
   constructor(private http: HttpClient) { }
-getArticles(){
-  this.http.get<Article[]>(this.articleRoute).subscribe(articles => {
-    this.articles = articles;
-    console.log('Article', this.articles);
+getFavorites(){
+  this.http.get<Favorites[]>(this.favoritesRoute).subscribe(favorites => {
+    this.favorites = favorites;
+    console.log('Favorites', this.favorites);
     });
 }
 
   ngOnInit() {
-  this.getArticles();
+  this.getFavorites();
     
 }
 }
