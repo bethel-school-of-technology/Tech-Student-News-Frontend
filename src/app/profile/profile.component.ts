@@ -8,6 +8,7 @@ import { User } from "../user";
   styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
+  private User = 'http://localhost:3000/users'; 
   user: User = new User();
 
   constructor(public userService: UserService) {}

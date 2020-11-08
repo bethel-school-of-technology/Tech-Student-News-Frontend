@@ -3,12 +3,15 @@ import { User } from "../user";
 import { UserService } from "../user.service";
 import { Router } from "@angular/router";
 
+
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+
+private User = 'http://localhost:3000/users'; 
   user: User = new User();
   constructor(private userService: UserService, private router: Router) {}
 

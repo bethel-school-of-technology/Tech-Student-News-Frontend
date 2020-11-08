@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./register.component.css"]
 })
 export class RegisterComponent implements OnInit {
+  private User = 'http://localhost:3000/users'; 
   // initialize an empty user object
   // we need to do this so the property binding works [(ngModel)]
   user: User = new User();
