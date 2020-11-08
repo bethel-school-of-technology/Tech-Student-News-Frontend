@@ -1,4 +1,4 @@
-<div class="pb-5 container" *ngFor="let favorites of favorites">
+<!-- <div class="pb-5 container" *ngFor="let favorites of favorites">
     <div class="row justify-content-md-center">
       <div class="col-sm-8 bg-secondary text-white">
         {{favorites.Category}}
@@ -40,3 +40,53 @@
     </div>
     
   </div>
+ -->
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>Welcome to Student Tech News</h1>
+        <p class="lead text-muted">WHERE NEWS IS OUR PASSION</p>
+      </div>
+    </section>
+  
+
+    <h2 class="text-center">Featured Projects</h2>
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div class="row" >
+          <div class="col-md-4" *ngFor="let projects of projects">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{projects.Category}}</text></svg>
+              <div class="card-body">
+                <p class="card-text">{{projects.Content}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"> {{projects.Date}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<h2 class="text-center">Favorites And Tips</h2>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-4" *ngFor="let favorites of favorites">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{favorites.Category}}</text></svg>
+              <div class="card-body">
+                <p class="card-text">{{favorites.Content}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"> {{favorites.Date}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
