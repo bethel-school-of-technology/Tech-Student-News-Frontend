@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { UserService } from "./user.service";
+//import { UserService } from "./user.service";
 
 @Component({
   selector: "app-root",
@@ -7,11 +7,11 @@ import { UserService } from "./user.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  constructor(private userService: UserService) {}
+  //constructor(private userService: UserService) {}
   ngOnInit() {
-    this.userService.validateToken().subscribe(response => {
-      console.log(response);
-      this.userService.loggedIn = response;
-    });
-  }
+   // this.userService.validateToken().subscribe(response => {
+     // console.log(response);
+      //this.userService.loggedIn = response;
+    }//);
+  //}
 }

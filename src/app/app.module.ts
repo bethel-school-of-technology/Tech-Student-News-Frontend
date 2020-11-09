@@ -8,9 +8,9 @@ import { FormsModule } from '@angular/forms';
 
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';
+//import { RegisterComponent } from './register/register.component';
+//import { LoginComponent } from './login/login.component';
+//import { ProfileComponent } from './profile/profile.component';
 
 import {FavoritesModule} from '../app/modules/favorites/favorites.module';
 import {ProjectsModule} from '../app/modules/projects/projects.module';
@@ -24,9 +24,9 @@ import {SuggestionsModule} from '../app/modules/suggestions/suggestions.module';
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    RegisterComponent,
-    LoginComponent,
-    ProfileComponent
+    //RegisterComponent,
+    //LoginComponent,
+    //ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -6,9 +6,9 @@ import {FavoritesTipsArticlesComponent} from './favorites-tips-articles/favorite
 import {FeaturedProjectsArticlesComponent} from './featured-projects-articles/featured-projects-articles.component';
 import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
 import {SuggestionsComponent} from './suggestions/suggestions.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';
+//import { RegisterComponent } from './register/register.component';
+//import { LoginComponent } from './login/login.component';
+//import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -31,18 +31,18 @@ const routes: Routes = [
   path:'suggestions',
   component: SuggestionsComponent
 },
-{
-  path:'register',
-  component: RegisterComponent
-},
-{
-  path:'login',
-  component: LoginComponent
-},
-{
-  path:'profile',
-  component: ProfileComponent
-},
+//{
+  //path:'register',
+  //component: RegisterComponent
+//},
+//{
+  //path:'login',
+  //component: LoginComponent
+//},
+//{
+  //path:'profile',
+  //component: ProfileComponent
+//},
 { path: "", pathMatch: "full", redirectTo: "/home" }
 ];
 
